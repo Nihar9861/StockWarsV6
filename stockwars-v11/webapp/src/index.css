@@ -1,0 +1,15 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+:root{--bg:7 10 16;--card:14 19 28;--card2:20 27 39;--line:26 35 51;--ink:255 255 255;--mute:139 150 167;--up:25 195 125;--down:255 77 94;--acc:79 140 255;--gold:245 185 74;--glow:.18;color-scheme:dark}
+[data-theme=light]{--bg:243 245 250;--card:255 255 255;--card2:237 240 247;--line:224 229 238;--ink:15 23 42;--mute:100 116 139;--up:10 158 98;--down:226 54 72;--acc:37 99 235;--gold:200 120 10;--glow:.10;color-scheme:light}
+body{margin:0;-webkit-tap-highlight-color:transparent;color:rgb(var(--ink));background:rgb(var(--bg));background-image:radial-gradient(900px 400px at 50% -120px,rgb(79 140 255/var(--glow)),transparent);transition:background .25s,color .25s}
+::-webkit-scrollbar{display:none}
+@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes sheet{from{transform:translateY(100%)}to{transform:none}}
+@keyframes ping2{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.4);opacity:0}}
+@keyframes shim{0%{background-position:-200px 0}100%{background-position:200px 0}}
+.fade{animation:up .35s ease both}
+.sheet{animation:sheet .25s ease both}
+.glass{background:rgb(var(--card)/.86);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.skel{background:linear-gradient(90deg,rgb(var(--card)) 0,rgb(var(--line)) 50%,rgb(var(--card)) 100%);background-size:400px 100%;animation:shim 1.2s infinite linear;border-radius:16px}
+input,select{outline:none}input,select{color:rgb(var(--ink))}input:focus,select:focus{border-color:rgb(var(--acc))}
+button{transition:transform .12s,opacity .12s}button:active:not(:disabled){transform:scale(.97)}

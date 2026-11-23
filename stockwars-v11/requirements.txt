@@ -1,0 +1,9 @@
+aiogram>=3.13,<4
+SQLAlchemy[asyncio]>=2.0.30
+asyncpg>=0.29
+alembic>=1.13
+redis>=5.0
+APScheduler>=3.10,<4
+fastapi>=0.111
+uvicorn[standard]>=0.30
+pydantic-settings>=2.3
